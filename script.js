@@ -28,7 +28,7 @@ function addItemToShoppingList() {
 
 	//Creates list item html and appends to page.
 	let itemHtml = createListItemHtml(itemName.value, itemAmount.value, id);
-	let itemListRef = document.getElementById("shopping-List");
+	let itemListRef = document.getElementById("shopping-list");
 	itemListRef.insertAdjacentHTML("afterend", itemHtml);
 
 	setDeleteButtonEvent(id);
@@ -38,7 +38,7 @@ function setDeleteButtonEvent(id) {
 	let deleteButton = document.getElementById("button"+id);
 	deleteButton.addEventListener("click", () => {
 		removeListItem(id);
-	})
+	});
 }
 
 function createListItemHtml(itemName, itemAmount, id) {
